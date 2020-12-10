@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://jsapar.tigris.org/JSaParSchema/2.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://jsapar.tigris.org/JSaParSchema/2.0 http://jsapar.tigris.org/JSaParSchema/2.0/JSaParSchema.xsd">
+    <fixedwidthschema lineseparator="\n">
+        <line linetype="Header" occurs="1" >
+            <cell name="EntityId" length="8" alignment="left"/>
+            <cell name="Date" length="9"><format type="date" pattern="YYYY-mm-DD"/></cell>
+        </line>
+        <line linetype="Payment" occurs="*" >
+            <cell name="PayFrom" length="15"/>
+            <cell name="PayTo" length="15" />
+            <cell name="Amount" length="8" padcharacter="0" alignment="right"><implieddecimal decimals="2"/></cell>
+        </line>
+    </fixedwidthschema>
+</schema>
